@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
+  background: linear-gradient(135deg, #d1c4e9 0%, #7c4dff 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,6 +42,25 @@ body {
 }
 @keyframes floatHeart {
   0% { transform: translateY(100vh) scale(0.7) rotate(-10deg); opacity: 0.7; }
+  70% { opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1.1) rotate(10deg); opacity: 0; }
+}
+
+/* Cute floating butterflies */
+.floating-butterflies {
+  position: fixed;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+.floating-butterflies span {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.8;
+  animation: floatButterfly 8s linear infinite;
+}
+@keyframes floatButterfly {
+  0% { transform: translateY(100vh) scale(0.7) rotate(-10deg); opacity: 0.8; }
   70% { opacity: 1; }
   100% { transform: translateY(-10vh) scale(1.1) rotate(10deg); opacity: 0; }
 }
@@ -214,4 +233,141 @@ button:active {
     width: 60px;
     height: 60px;
   }
+}
+
+/* Cute sticky note */
+.sticky-note {
+  background: #fffbe7;
+  border: 2px dashed #f7c873;
+  border-radius: 18px 32px 18px 32px;
+  box-shadow: 0 4px 18px rgba(247,200,115,0.13);
+  color: #a4133c;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.1rem;
+  padding: 18px 24px;
+  margin: 0 auto 22px auto;
+  max-width: 320px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  transform: rotate(-2deg);
+}
+.sticky-note:after {
+  content: '✏️';
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+/* Cute border/frame */
+.cute-frame {
+  border: 4px dashed #ee9ca7;
+  border-radius: 40px;
+  padding: 18px 0 0 0;
+  box-shadow: 0 8px 32px rgba(215,38,96,0.10);
+  background: rgba(255,255,255,0.12);
+  position: relative;
+}
+
+/* Celebration overlay */
+.celebration-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(255,255,255,0.85);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.celebration-overlay.active {
+  display: flex;
+  animation: fadeInCelebration 0.7s;
+}
+@keyframes fadeInCelebration {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.celebration-heart {
+  font-size: 5rem;
+  animation: popHeart 1.2s;
+}
+@keyframes popHeart {
+  0% { transform: scale(0.2); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.celebration-message {
+  font-family: 'Pacifico', cursive;
+  color: #d72660;
+  font-size: 2.2rem;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+.celebration-share {
+  margin-top: 24px;
+}
+.celebration-share button {
+  background: linear-gradient(90deg, #d72660 0%, #ee9ca7 100%);
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  padding: 14px 38px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: 'Quicksand', 'Segoe UI', 'Arial', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 12px rgba(215,38,96,0.13);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.celebration-share button:hover {
+  background: linear-gradient(90deg, #ee9ca7 0%, #d72660 100%);
+  transform: scale(1.08);
+}
+
+/* Twinkling stars */
+.twinkle-stars {
+  position: fixed;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 2;
+}
+.twinkle-stars span {
+  position: absolute;
+  color: #fffbe7;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  animation: twinkle 2.5s infinite;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Doodle accents */
+.doodle-heart {
+  position: fixed;
+  left: 18px;
+  top: 18px;
+  font-size: 2.2rem;
+  color: #d72660;
+  opacity: 0.7;
+  z-index: 3;
+  pointer-events: none;
+  transform: rotate(-12deg);
+}
+.doodle-star {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  font-size: 2.2rem;
+  color: #fffbe7;
+  opacity: 0.7;
+  z-index: 3;
+  pointer-events: none;
+  transform: rotate(18deg);
 } 

@@ -7,42 +7,63 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="floating-hearts">
-    <span style="left:10%; animation-delay:0s;">💖</span>
-    <span style="left:25%; animation-delay:1.5s;">💕</span>
-    <span style="left:40%; animation-delay:0.8s;">💗</span>
-    <span style="left:60%; animation-delay:2.2s;">💞</span>
-    <span style="left:75%; animation-delay:0.4s;">💓</span>
-    <span style="left:85%; animation-delay:1.2s;">💘</span>
+  <audio id="bg-music" src="https://cdn.pixabay.com/audio/2022/10/16/audio_12b5b6b6b7.mp3" autoplay loop style="display:none;"></audio>
+  <div class="twinkle-stars">
+    <span style="left:8%; top:12%; animation-delay:0s;">✦</span>
+    <span style="left:22%; top:30%; animation-delay:1.2s;">✧</span>
+    <span style="left:40%; top:18%; animation-delay:0.7s;">✦</span>
+    <span style="left:60%; top:25%; animation-delay:2.1s;">✧</span>
+    <span style="left:75%; top:10%; animation-delay:0.4s;">✦</span>
+    <span style="left:85%; top:35%; animation-delay:1.7s;">✧</span>
+  </div>
+  <div class="doodle-heart">❤️</div>
+  <div class="doodle-star">⭐</div>
+  <div class="floating-butterflies">
+    <span style="left:12%; animation-delay:0s;">🦋</span>
+    <span style="left:28%; animation-delay:2s;">🦋</span>
+    <span style="left:45%; animation-delay:1.2s;">🦋</span>
+    <span style="left:65%; animation-delay:3.1s;">🦋</span>
+    <span style="left:80%; animation-delay:0.7s;">🦋</span>
+    <span style="left:90%; animation-delay:2.5s;">🦋</span>
   </div>
   <div class="heart-bg"></div>
-  <div class="container">
-    <div class="spotify-embed" style="margin-bottom: 18px;">
-      <iframe style="border-radius:12px" 
-        src="https://open.spotify.com/embed/track/3grPhZBf0HUjUX5IOLwIfV?utm_source=generator&theme=0&autoplay=1&loop=1&start_time=77" 
-        width="100%" 
-        height="80" 
-        frameBorder="0" 
-        allowfullscreen="" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-        loading="lazy">
-      </iframe>
+  <div class="cute-frame">
+    <div class="container">
+      <div class="spotify-embed" style="margin-bottom: 18px;">
+        <iframe style="border-radius:12px" 
+          src="https://open.spotify.com/embed/track/3grPhZBf0HUjUX5IOLwIfV?utm_source=generator&theme=0&autoplay=1&loop=1&start_time=77" 
+          width="100%" 
+          height="80" 
+          frameBorder="0" 
+          allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="sticky-note">Khensani, you are my sunshine and my favorite person. I hope this page makes you smile! 🌸</div>
+      <div class="her-gallery" style="margin-bottom: 18px;">
+        <img src="her1.jpg" alt="Khensani photo 1" />
+        <img src="her2.jpg" alt="Khensani photo 2" />
+        <img src="her3.jpg" alt="Khensani photo 3" />
+        <img src="her4.jpg" alt="Khensani photo 4" />
+      </div>
+      <h1>Khensani, will you be my girlfriend?</h1>
+      <div class="divider"></div>
+      <p class="custom-message">From the moment our paths crossed, my world has been filled with more color, laughter, and warmth. Khensani, you are the melody to my heart and the light to my days. Would you make me the happiest person and be my girlfriend?</p>
+      <div class="animation" id="animation"></div>
+      <div class="buttons">
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+      </div>
+      <div id="confetti"></div>
     </div>
-    <div class="her-gallery" style="margin-bottom: 18px;">
-      <img src="her1.jpg" alt="Khensani photo 1" />
-      <img src="her2.jpg" alt="Khensani photo 2" />
-      <img src="her3.jpg" alt="Khensani photo 3" />
-      <img src="her4.jpg" alt="Khensani photo 4" />
+  </div>
+  <div class="celebration-overlay" id="celebrationOverlay">
+    <div class="celebration-heart">💖</div>
+    <div class="celebration-message">She said YES!<br>Khensani &hearts; You</div>
+    <div class="celebration-share">
+      <button id="shareBtn">Share this moment</button>
     </div>
-    <h1>Khensani, will you be my girlfriend?</h1>
-    <div class="divider"></div>
-    <p class="custom-message">From the moment our paths crossed, my world has been filled with more color, laughter, and warmth. Khensani, you are the melody to my heart and the light to my days. Would you make me the happiest person and be my girlfriend?</p>
-    <div class="animation" id="animation"></div>
-    <div class="buttons">
-      <button id="yesBtn">Yes</button>
-      <button id="noBtn">No</button>
-    </div>
-    <div id="confetti"></div>
   </div>
   <script src="script.js"></script>
 </body>

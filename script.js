@@ -37,6 +37,8 @@ function launchConfetti() {
 const yesBtn = document.getElementById('yesBtn');
 const noBtn = document.getElementById('noBtn');
 const container = document.querySelector('.container');
+const celebrationOverlay = document.getElementById('celebrationOverlay');
+const shareBtn = document.getElementById('shareBtn');
 
 let noClickCount = 0;
 
@@ -53,5 +55,15 @@ noBtn.addEventListener('mouseover', function() {
 
 yesBtn.addEventListener('click', function() {
   launchConfetti();
-  container.innerHTML = '<h1>Yay! 💖</h1><p>You just made my day! 😊</p>';
-}); 
+  celebrationOverlay.classList.add('active');
+});
+
+if (shareBtn) {
+  shareBtn.addEventListener('click', function() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+      shareBtn.textContent = 'Link copied!';
+      setTimeout(() => { shareBtn.textContent = 'Share this moment'; }, 2000);
+    });
+  });
+} 
